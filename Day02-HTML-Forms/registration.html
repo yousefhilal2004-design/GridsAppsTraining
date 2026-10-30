@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student practice registration form with native HTML validation.">
+    <title>Registration | Grids Tech</title>
+</head>
+<body>
+    <header>
+        <h1>Grids Tech</h1>
+        <p>Simple technology solutions for everyone.</p>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="registration.html" aria-current="page">Registration</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>H04 Challenge: Registration Form</h2>
+            <p>I created this registration form to practice different input types and browser validation.</p>
+            
+
+            <!-- Browser checks the fields; a backend would be needed to save registration. -->
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <p>
+                        <label for="student-name">Full name *</label><br>
+                        <input type="text" id="student-name" name="studentName" required minlength="2" maxlength="80" autocomplete="name">
+                    </p>
+                    <p>
+                        <label for="student-email">Email *</label><br>
+                        <input type="email" id="student-email" name="studentEmail" required autocomplete="email">
+                    </p>
+                    <p>
+                        <label for="student-phone">Phone number</label><br>
+                        <input type="tel" id="student-phone" name="studentPhone" autocomplete="tel" placeholder="e.g. 0591234567">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Training Information</legend>
+                    <p>
+                        <label for="track">Choose a track *</label><br>
+                        <select id="track" name="track" required>
+                            <option value="">Select a track</option>
+                            <option value="frontend">Front-End</option>
+                            <option value="backend">Back-End</option>
+                            <option value="fullstack">Full Stack</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="start-date">Preferred start date *</label><br>
+                        <input type="date" id="start-date" name="startDate" required>
+                    </p>
+                    <p>Study time *</p>
+                    <p>
+                        <input type="radio" id="morning" name="studyTime" value="morning" required>
+                        <label for="morning">Morning</label>
+                        <input type="radio" id="evening" name="studyTime" value="evening">
+                        <label for="evening">Evening</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="agreement" name="agreement" value="yes" required>
+                        <label for="agreement">I confirm that the information I entered is correct. *</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Check and register</button>
+                    <button type="reset">Clear form</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Grids Tech. This is a student training project.</p>
+        <p><a href="contact.html">Contact us</a></p>
+    </footer>
+</body>
+</html>
