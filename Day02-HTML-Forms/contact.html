@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use our practice contact form to enter a message.">
+    <title>Contact | Grids Tech</title>
+</head>
+<body>
+    <header>
+        <h1>Grids Tech</h1>
+        <p>Simple technology solutions for everyone.</p>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+            <a href="registration.html">Registration</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <p>This is a practice contact form. It checks the required fields in your browser.</p>
+            <p><strong>Note:</strong> It does not send messages to a server yet.</p>
+
+            <!-- No backend yet: submit stays on the same page. -->
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Your Message</legend>
+
+                    <p>
+                        <label for="full-name">Full name *</label><br>
+                        <input type="text" id="full-name" name="fullName" required minlength="2" maxlength="80" autocomplete="name">
+                    </p>
+
+                    <p>
+                        <label for="email">Email *</label><br>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </p>
+
+                    <p>
+                        <label for="subject">Subject *</label><br>
+                        <select id="subject" name="subject" required>
+                            <option value="">Choose a subject</option>
+                            <option value="website">Website question</option>
+                            <option value="app">App question</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="message">Message *</label><br>
+                        <textarea id="message" name="message" rows="5" cols="40" required minlength="10"></textarea>
+                    </p>
+
+                    <button type="submit">Check and submit</button>
+                    <button type="reset">Clear form</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Grids Tech. This is a student training project.</p>
+        <p><a href="contact.html">Contact us</a></p>
+    </footer>
+</body>
+</html>
