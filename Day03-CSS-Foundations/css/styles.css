@@ -1,0 +1,68 @@
+/* Day 03: CSS Foundations, Cascade & Box Model */
+/* Design tokens: change these values to update the whole site. */
+:root {
+  --color-primary: #2457a6;
+  --color-primary-dark: #173b73;
+  --color-background: #f3f6fb;
+  --color-surface: #ffffff;
+  --color-text: #1d2939;
+  --color-muted: #58677c;
+  --color-border: #d7dfeb;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --radius: 0.9rem;
+  --shadow: 0 8px 24px rgba(29, 41, 57, 0.07);
+}
+
+/* Border-box makes width include padding and borders. */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--color-background); color: var(--color-text); font: 1rem/1.65 Arial, Helvetica, sans-serif; }
+a { color: var(--color-primary); }
+a:hover { color: var(--color-primary-dark); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid #e59b2d; outline-offset: 3px; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 { line-height: 1.25; }
+h2 { margin-top: 0; color: var(--color-primary-dark); }
+p { margin: 0 0 var(--space-2); }
+
+/* The site header and navigation appear on every page. */
+.site-header { padding: var(--space-3) max(var(--space-2), calc((100% - 1100px) / 2)); background: var(--color-primary-dark); color: white; }
+.site-header h1 { margin: 0; }
+.site-header p { margin: var(--space-1) 0; color: #e3edff; }
+.site-nav { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-top: var(--space-2); }
+.site-nav a { color: white; text-decoration: none; border: 1px solid #ffffff55; border-radius: 8px; padding: 0.3rem 0.75rem; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { background: white; color: var(--color-primary-dark); }
+
+/* Sections use padding, border, margin, and shadow: the box model. */
+.page-content { max-width: 1100px; margin: 0 auto; padding: var(--space-4) var(--space-2); }
+.content-section, .post-card { padding: var(--space-3); margin-bottom: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-surface); box-shadow: var(--shadow); }
+.hero { padding: clamp(1.5rem, 4vw, 3rem); background: #e8f0fd; border-color: #c3d7f6; }
+.hero h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); }
+.button-link, button { display: inline-block; padding: 0.6rem 1rem; border: 0; border-radius: 8px; background: var(--color-primary); color: white; font: inherit; text-decoration: none; cursor: pointer; }
+.button-link:hover, button:hover { color: white; background: var(--color-primary-dark); }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: var(--space-2); padding: 0; list-style: none; }
+.feature-grid li { padding: var(--space-2); border: 1px solid var(--color-border); border-radius: 8px; background: #f8faff; }
+.post-card { border-left: 5px solid var(--color-primary); }
+figure { margin: var(--space-2) 0; }
+figcaption, .small-note { color: var(--color-muted); font-size: 0.9rem; }
+
+/* Forms: keep the Day 02 HTML validation, only change appearance. */
+.form-panel { max-width: 680px; }
+label { display: inline-block; margin-top: var(--space-2); font-weight: 600; }
+input:not([type="checkbox"]):not([type="radio"]), select, textarea { display: block; width: 100%; max-width: 100%; padding: 0.65rem; margin: 0.3rem 0 var(--space-1); border: 1px solid #9aa8bb; border-radius: 6px; background: white; color: var(--color-text); font: inherit; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--color-primary); }
+fieldset { padding: var(--space-2); margin: var(--space-2) 0; border: 1px solid var(--color-border); border-radius: 8px; }
+legend { font-weight: 700; }
+textarea { min-height: 115px; }
+
+/* Tables scroll on a small screen instead of breaking page width. */
+table { display: block; overflow-x: auto; border-collapse: collapse; max-width: 100%; margin: var(--space-2) 0; }
+th, td { padding: 0.75rem; border: 1px solid var(--color-border); text-align: left; }
+th { background: #e8f0fd; }
+.site-footer { padding: var(--space-3) var(--space-2); background: var(--color-primary-dark); color: white; text-align: center; }
+.site-footer a { color: #e7efff; }
+.site-footer p { margin-bottom: 0.35rem; }
+@media (max-width: 550px) { .page-content { padding-top: var(--space-2); } .content-section, .post-card { padding: var(--space-2); } }
