@@ -20,16 +20,13 @@ I updated my Grids Tech website from Day 03. It now changes layout to work bette
 Open `index.html` in a browser. Use the navigation bar to visit the other pages. Open the two C08 files to compare the overflow bug and the fix.
 
 ## Day 04 Review — edit with your real experience
-1. **What I built today:** I made my website responsive for phones, tablets and computers.
-2. **A bug I fixed:** I fixed horizontal overflow in the C08 practice page.
-3. **One thing I can explain:** I can explain why Flexbox works well for a navbar and Grid works well for cards.
-4. **What I still need to finish:** I need to test the project on my own device and push my commits to GitHub. (Change this after you finish.)
+1. What I built today: I made my website responsive for different screen sizes.
 
-## Day 04 checklist
-- [x] Responsive navbar and card grid are in the project.
-- [x] C08 broken and fixed examples are included.
-- [ ] Test the pages yourself on mobile, tablet and desktop widths.
-- [ ] Review the screenshots.
-- [ ] Make three meaningful commits and push to GitHub.
+2. A bug I fixed: I fixed a horizontal overflow problem in the C08 practice page.
 
-**Note:** This is a training project. The contact and registration forms are HTML-only examples and do not send data to a server.
+3. One thing I can explain: I learned how Flexbox, Grid, and media queries work.
+
+4. What I still need to finish: I need to practice responsive design more.
+
+
+
