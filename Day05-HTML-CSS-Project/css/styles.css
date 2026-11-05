@@ -1,0 +1,47 @@
+/* Day 05: one shared external stylesheet for the whole website. */
+:root { --navy:#143666; --blue:#235bb1; --light:#f3f7fd; --white:#fff; --ink:#1a2b43; --muted:#475569; --border:#cbd7e8; --focus:#f59e0b; --space:1rem; }
+*,*::before,*::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); background:var(--light); font-family:Arial, Helvetica, sans-serif; line-height:1.65; }
+a { color:#124a91; }
+a:hover { text-decoration-thickness:2px; }
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible { outline:3px solid var(--focus); outline-offset:3px; }
+.skip-link { position:absolute; left:1rem; top:-5rem; z-index:5; background:white; padding:.65rem 1rem; color:var(--navy); border-radius:.4rem; }
+.skip-link:focus { top:1rem; }
+.site-header { background:var(--navy); color:var(--white); }
+.header-inner,.footer-inner,.page-content { width:min(100% - 2rem, 1100px); margin-inline:auto; }
+.header-inner { padding:1.2rem 0; }
+.brand-link { color:#fff; text-decoration:none; font-weight:800; font-size:1.65rem; }
+.brand h1 { margin:0; font-size:1.65rem; line-height:1.25; }
+.brand p { margin:.15rem 0 1rem; font-size:.95rem; }
+.site-nav { display:flex; flex-wrap:wrap; gap:.4rem; }
+.site-nav a { color:#fff; border:1px solid #7794c5; border-radius:.45rem; text-decoration:none; padding:.45rem .65rem; font-size:.9rem; }
+.site-nav a:hover,.site-nav a[aria-current="page"] { background:white; color:var(--navy); }
+.page-content { padding:1rem 0 2rem; }
+.content-section { padding:1.35rem; margin:0 0 1rem; background:#fff; border:1px solid var(--border); border-radius:.8rem; box-shadow:0 3px 10px rgba(12,40,85,.05); }
+.content-section h2 { color:var(--navy); font-size:clamp(1.3rem, 3vw, 1.8rem); margin-top:0; line-height:1.25; }
+.content-section h3 { color:var(--navy); margin-top:0; }
+.hero { background:linear-gradient(120deg,#edf4ff,#fff); }
+.service-grid,.feature-grid { display:grid; grid-template-columns:minmax(0,1fr); gap:1rem; }
+.service-card,.feature-grid > li { min-width:0; padding:1rem; background:#f8fbff; border:1px solid var(--border); border-radius:.6rem; }
+.feature-grid { list-style:none; padding:0; }
+.service-card p { margin-bottom:0; }
+.button-link,button { display:inline-block; background:var(--blue); color:#fff; padding:.6rem .9rem; border:0; border-radius:.45rem; font:inherit; text-decoration:none; cursor:pointer; }
+.button-link:hover,button:hover { background:#153e7e; }
+figure { margin:1rem 0; } img { max-width:100%; height:auto; } figcaption { font-size:.9rem; color:var(--muted); }
+.form-panel { max-width:750px; }
+fieldset { min-width:0; margin:1rem 0; border:1px solid var(--border); border-radius:.55rem; padding:1rem; }
+legend { font-weight:700; color:var(--navy); }
+label { font-weight:600; }
+input:not([type="checkbox"]):not([type="radio"]),select,textarea { width:min(100%, 600px); max-width:100%; padding:.65rem; margin-top:.3rem; border:1px solid #8ca3c5; border-radius:.4rem; font:inherit; }
+input[type="checkbox"],input[type="radio"] { accent-color:var(--blue); }
+button[type="reset"] { background:#526477; }
+button + button { margin-left:.5rem; }
+.table-wrap { width:100%; overflow-x:auto; } table { width:100%; border-collapse:collapse; min-width:400px; } caption { text-align:left; color:var(--muted); padding:.25rem 0; } th,td { text-align:left; border:1px solid var(--border); padding:.65rem; } th { background:#e7f0fd; }
+.steps { padding-left:1.35rem; } .steps li { padding:.4rem 0 .8rem; } .steps p { margin:.15rem 0; }
+.faq-list h3 { margin:1.3rem 0 .2rem; }.faq-list p { margin-top:0; }
+.resource-list li { margin:.65rem 0; overflow-wrap:anywhere; }
+.site-footer { background:#102b50; color:#fff; } .footer-inner { padding:1.3rem 0; } .site-footer a { color:#fff; }
+@media (min-width:600px) { .service-grid,.feature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .content-section { padding:1.8rem; } }
+@media (min-width:960px) { .service-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } .feature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .header-inner { padding:1.5rem 0; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
