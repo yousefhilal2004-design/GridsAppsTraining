@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Student practice registration form with native HTML validation." name="description"/>
+<title>Registration | Grids Tech</title>
+<link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><div class="header-inner"><div class="brand"><h1><a class="brand-link" href="index.html">Grids Tech</a></h1><p>Simple technology solutions for everyone.</p></div><nav aria-label="Main navigation" class="site-nav"><a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="team.html">Team</a>
+<a href="pricing.html">Pricing</a>
+<a href="blog.html">Blog</a>
+<a href="faq.html">FAQ</a>
+<a href="process.html">Process</a>
+<a href="resources.html">Resources</a>
+<a href="contact.html">Contact</a>
+<a aria-current="page" href="registration.html">Registration</a></nav></div></header>
+<main class="page-content" id="main-content">
+<section class="content-section">
+<h2>H04 Challenge: Registration Form</h2>
+<p>I created this registration form to practice different input types and browser validation.</p>
+<p><strong>Note:</strong> This is only an HTML demo. The information is not saved to a database.</p>
+<!-- Browser checks the fields; a backend would be needed to save registration. -->
+<form action="#" class="form-panel" method="get">
+<fieldset>
+<legend>Personal Information</legend>
+<p>
+<label for="student-name">Full name *</label><br/>
+<input autocomplete="name" id="student-name" maxlength="80" minlength="2" name="studentName" required="" type="text"/>
+</p>
+<p>
+<label for="student-email">Email *</label><br/>
+<input autocomplete="email" id="student-email" name="studentEmail" required="" type="email"/>
+</p>
+<p>
+<label for="student-phone">Phone number</label><br/>
+<input autocomplete="tel" id="student-phone" name="studentPhone" placeholder="e.g. 0591234567" type="tel"/>
+</p>
+</fieldset>
+<fieldset>
+<legend>Training Information</legend>
+<p>
+<label for="track">Choose a track *</label><br/>
+<select id="track" name="track" required="">
+<option value="">Select a track</option>
+<option value="frontend">Front-End</option>
+<option value="backend">Back-End</option>
+<option value="fullstack">Full Stack</option>
+</select>
+</p>
+<p>
+<label for="start-date">Preferred start date *</label><br/>
+<input id="start-date" name="startDate" required="" type="date"/>
+</p>
+<p>Study time *</p>
+<p>
+<input id="morning" name="studyTime" required="" type="radio" value="morning"/>
+<label for="morning">Morning</label>
+<input id="evening" name="studyTime" type="radio" value="evening"/>
+<label for="evening">Evening</label>
+</p>
+<p>
+<input id="agreement" name="agreement" required="" type="checkbox" value="yes"/>
+<label for="agreement">I confirm that the information I entered is correct. *</label>
+</p>
+</fieldset>
+<p>
+<button type="submit">Check and register</button>
+<button type="reset">Clear form</button>
+</p>
+</form>
+</section>
+</main>
+<footer class="site-footer"><div class="footer-inner"><p>© 2026 Grids Tech. This is a student training project, not a real business.</p><p><a href="index.html">Home</a> · <a href="contact.html">Contact</a> · <a href="faq.html">FAQ</a></p></div></footer>
+</body>
+</html>
