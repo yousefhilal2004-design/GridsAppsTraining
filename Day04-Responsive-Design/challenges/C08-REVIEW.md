@@ -13,4 +13,3 @@ The broken example has a fixed 900px card and a 1100px image. On a small phone, 
 - `C08-overflow-broken.html` — intentionally broken practice page.
 - `C08-overflow-fixed.html` — corrected page.
 
-Note: These are separate practice pages. The real website uses the fixed approach.
