@@ -1,0 +1,48 @@
+/* Day 06 custom CSS — Bootstrap handles the layout and utilities. */
+:root { --ink:#10213c; --deep:#0b1730; --blue:#4e78f6; --soft:#f5f7fc; --line:#e6eafa; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:white; }
+a:focus-visible,button:focus-visible { outline:3px solid #f5ad3b; outline-offset:3px; }
+.skip-link { position:absolute; top:-100px; left:12px; z-index:9999; background:#fff; color:#111; padding:12px 18px; border-radius:8px; }
+.skip-link:focus {top:10px;}
+.site-header { background:var(--deep); box-shadow:0 4px 24px #04112d16; }
+.navbar { min-height:78px; }
+.navbar-brand { letter-spacing:-.03em; }
+.brand-mark { display:inline-grid; place-items:center; width:34px; height:34px; margin-right:5px; background:var(--blue); border-radius:10px; }
+.brand-tag { font-size:.56rem; letter-spacing:.15em; color:#9bafdb; vertical-align:middle; margin-left:5px; }
+.navbar .nav-link { color:#c3cee9; font-weight:600; }
+.navbar .nav-link:hover,.navbar .nav-link.active { color:white; }
+.navbar .nav-link.active { text-decoration:underline; text-decoration-color:#7293ff; text-underline-offset:7px; }
+.hero-section,.page-banner {background:radial-gradient(circle at 90% 15%,#283d74 0,transparent 38%),linear-gradient(120deg,#0b1730,#101f41);color:white;}
+.py-lg-6 {padding-top:6rem!important;padding-bottom:6rem!important;}
+.hero-section h1 { max-width:720px; letter-spacing:-.055em;line-height:1.12; }
+.accent-text { color:#9db6ff; }
+.eyebrow {letter-spacing:.19em; font-size:.72rem;font-weight:800;color:#aabefd;}
+.eyebrow-dark {color:#476acc;}
+.text-muted-on-dark {color:#c6d0e8;}
+.btn-primary {background:#557cf5;border-color:#557cf5;}
+.btn-primary:hover {background:#3e63d6;border-color:#3e63d6;}
+.hero-image-panel {background:#ffffff0d;border:1px solid #ffffff25;border-radius:26px;padding:24px;box-shadow:0 28px 75px #050e2780;}
+.metrics-line strong {display:block;font-size:1.45rem;color:white;}
+.metrics-line span {display:block;font-size:.73rem;color:#b1c2e7;}
+.section-spacing {padding-top:5rem;padding-bottom:5rem;}
+.section-heading {font-weight:800;letter-spacing:-.035em;}
+.feature-card,.pricing-card,.stat-card,.panel {background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 34px #122e6e09;}
+.feature-card {transition:transform .2s,box-shadow .2s;}
+.feature-card:hover {transform:translateY(-3px);box-shadow:0 14px 30px #122e6e12;}
+.feature-no {font-size:.81rem;font-weight:800;color:#5b7fe8;}
+.callout {background:#eef3ff;border-radius:20px;}
+.site-footer {background:#0b1730;color:#c0cbe2;font-size:.9rem;}
+.plan-tag,.popular-tag {font-size:.7rem;letter-spacing:.1em;font-weight:800;color:#476acc;}
+.popular-tag {color:#345acb;}
+.pricing-card.featured {border:2px solid #6c8bfa;box-shadow:0 15px 40px #4b6de528;}
+.price {font-size:2.8rem;font-weight:800;letter-spacing:-.06em;}
+.price span {font-size:.85rem;letter-spacing:0;font-weight:500;color:#73819c;}
+.stat-label {font-size:.84rem;color:#667894;font-weight:600;}
+.stat-number {font-size:2.3rem;letter-spacing:-.055em;}
+.dot {width:12px;height:12px;border-radius:50%;}
+.dot-blue{background:#507af1}.dot-violet{background:#9771ef}.dot-green{background:#23ad85}.dot-orange{background:#e9a23b}
+.progress {height:10px;background:#e8ecf7;}.progress-bar {background:#557cf5;}
+.table> :not(caption)>*>* {padding:.85rem .5rem;}
+@media (max-width:767.98px) {.py-lg-6 {padding-top:4rem!important;padding-bottom:4rem!important;}.section-spacing {padding-top:3rem;padding-bottom:3rem;}.hero-section h1 {font-size:2.5rem;}.brand-tag {display:none;} }
